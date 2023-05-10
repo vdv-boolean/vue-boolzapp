@@ -22,12 +22,12 @@ General settings
     --drk-color: #A8A8A8;
     --not-color: #83D5FB;
     --sel-chat: #E6E8E8;
+    --search-bord: #F9F9F9;
 }
 
 /* Flex classes */
 
 .flex-sb {
-    background-color: var(--lit-color);
     display: flex;
     justify-content: space-between;
 }
@@ -80,6 +80,23 @@ Window
     display: flex;
 }
 
+img {
+    height: 90%;
+    border-radius: 100%;
+    margin-inline: 0.5rem;
+}
+
+i,
+span {
+    color: var(--drk-color);
+    margin-inline: 0.5rem;
+}
+
+.chat-list > div:first-child,
+.chat-conversation > div:first-child {
+    background-color: var(--lit-color);
+}
+
 /* Chat list side */
 
 .chat-list {
@@ -87,20 +104,26 @@ Window
     width: calc(100% / 3);
 }
 
+.notification-setting {
+    background-color: var(--not-color);
+}
+
+.notification-setting i {
+    color: var(--not-color);
+    background-color: white;
+    padding: 0.7rem;
+    border-radius: 100%;
+}
+
+.chat-search {
+    height: 50px !important;
+    box-shadow: inset 0px 0px 0px 10px var(--search-bord);
+    padding-inline: 2rem;
+}
+
 /* Chat conversation side */
 
 .chat-conversation {
     height: 100%;
     width: calc(100% / 3 * 2);
-}
-
-img {
-    height: 90%;
-    border-radius: 100%;
-    margin-inline: 0.5rem;
-}
-
-i {
-    color: var(--drk-color);
-    margin-inline: 0.5rem;
 }
