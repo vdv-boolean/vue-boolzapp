@@ -63,10 +63,14 @@ Window
     display: flex;
 }
 
+/* Chat list side */
+
 .chat-list {
     height: 100%;
     width: calc(100% / 3);
 }
+
+/* Chat conversation side */
 
 .chat-conversation {
     height: 100%;
