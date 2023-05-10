@@ -18,6 +18,9 @@ General settings
 :root {
     --top-bg: #0E8B7D;
     --bot-bg: #D5D6CF;
+    --lit-color:#E7E7E7;
+    --not-color: #83D5FB;
+    --sel-chat: #E6E8E8;
 }
 
 /************************************************
