@@ -23,6 +23,8 @@ General settings
     --not-color: #83D5FB;
     --sel-chat: #E6E8E8;
     --search-bord: #F9F9F9;
+    --msg-area :#F1EBE7;
+    --text-area-icon: #62696A;
 }
 
 /* Flex classes */
@@ -102,6 +104,7 @@ span {
 .chat-list {
     height: 100%;
     width: calc(100% / 3);
+    background-color: #fff;
 }
 
 .notification-setting {
@@ -126,4 +129,20 @@ span {
 .chat-conversation {
     height: 100%;
     width: calc(100% / 3 * 2);
+    background-image: url(../img/mine.jpg);
+}
+
+.bottom-bar {
+    background-color: var(--msg-area);
+}
+
+.bottom-bar i {
+    color: var(--text-area-icon);
+    padding-inline: 2rem;
+}
+
+.text-box {
+    background-color: #fff;
+    height: 80%;
+    flex-grow: 1;
 }
