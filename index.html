@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Boolzapp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <script src="assets/script.js" defer></script>
         <link rel="stylesheet" href="assets/debug.css">
         <link rel="stylesheet" href="assets/style.css">
@@ -23,7 +24,17 @@
 
             <!-- Left side of window -->
             <div class="chat-list">
-                <div class="user-info"></div>
+                <div class="user-info flex-sb">
+                    <div class="info flex-ai-c">
+                        <img src="img/avatar_io.jpg" alt="">
+                        <span class="user-name">Sofia</span>
+                    </div>
+                    <div class="control flex-ai-c">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>                   
+                </div>
                 <div class="notification-setting"></div>
                 <div class="chat-search"></div>
                 <div class="chats"></div>
@@ -38,7 +49,20 @@
             
             <!-- Right side of window -->
             <div class="chat-conversation">
-                <div class="top-bar"></div>
+                <div class="top-bar flex-sb">
+                    <div class="info flex-ai-c">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <div class="div">
+                            <div class="user-name">Michele</div>
+                            <div class="last-access">Ultimo accesso oggi alle 12:00</div>
+                        </div>
+                    </div>
+                    <div class="control flex-ai-c">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>   
+                </div>
                 <div class="conversation"></div>
                 <div class="bottom-bar"></div>              
             </div>

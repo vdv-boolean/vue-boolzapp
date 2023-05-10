@@ -19,8 +19,22 @@ General settings
     --top-bg: #0E8B7D;
     --bot-bg: #D5D6CF;
     --lit-color:#E7E7E7;
+    --drk-color: #A8A8A8;
     --not-color: #83D5FB;
     --sel-chat: #E6E8E8;
+}
+
+/* Flex classes */
+
+.flex-sb {
+    background-color: var(--lit-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-ai-c {
+    display: flex;
+    align-items: center;
 }
 
 /************************************************
@@ -78,4 +92,15 @@ Window
 .chat-conversation {
     height: 100%;
     width: calc(100% / 3 * 2);
+}
+
+img {
+    height: 90%;
+    border-radius: 100%;
+    margin-inline: 0.5rem;
+}
+
+i {
+    color: var(--drk-color);
+    margin-inline: 0.5rem;
 }

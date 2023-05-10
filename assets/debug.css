@@ -6,7 +6,7 @@
     background-color: salmon;
 }
 
-.chat-list div,
+.chat-list > div,
 .top-bar,
 .bottom-bar {
     width: 100%;
