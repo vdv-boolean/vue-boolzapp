@@ -66,11 +66,9 @@ Window
 .chat-list {
     height: 100%;
     width: calc(100% / 3);
-    background-color: blue;
 }
 
 .chat-conversation {
     height: 100%;
     width: calc(100% / 3 * 2);
-    background-color: salmon;
 }
