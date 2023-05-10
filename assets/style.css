@@ -46,3 +46,31 @@ Container
     height: calc(100vh - 140px);
     background-color: var(--bot-bg);
 }
+
+/***********************
+Window
+***********************/
+
+.window {
+    width: 1500px;
+    height: 90vh;
+    background-color: white;
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.chat-list {
+    height: 100%;
+    width: calc(100% / 3);
+    background-color: blue;
+}
+
+.chat-conversation {
+    height: 100%;
+    width: calc(100% / 3 * 2);
+    background-color: salmon;
+}
