@@ -124,6 +124,14 @@ span {
     padding-inline: 2rem;
 }
 
+.chats {
+    height: calc(100% - 70px - 50px - 70px);
+    overflow-y: scroll;
+}
+.chat img {
+    height: 20px;
+}
+
 /* Chat conversation side */
 
 .chat-conversation {
