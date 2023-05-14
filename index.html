@@ -49,7 +49,11 @@
                     <span>Cerca o inizia una nuova chat</span>
                 </div>
                 <ul class="chats">
-                    <li v-for="(contact, i) in contacts" class="chat">
+                    <li
+                        v-for="(contact, i) in contacts"
+                        :class="{active: i == activeIndex}"
+                        @click="setActiveIndex(contact)" class="chat"
+                    >
                         <img :src="contact.avatar" :alt="contact.name">
 							<div class="info">
 								<div class="name">{{ contact.name }}</div>
@@ -66,9 +70,9 @@
             <div class="chat-conversation">
                 <div class="top-bar flex-sb">
                     <div class="info flex-ai-c">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="contacts[activeIndex].avatar" alt="">
                         <div class="div">
-                            <div class="user-name">Michele</div>
+                            <div class="user-name">{{ contacts[activeIndex].name }}</div>
                             <div class="last-access">Ultimo accesso oggi alle 12:00</div>
                         </div>
                     </div>
@@ -78,7 +82,21 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>   
                 </div>
-                <div class="conversation"></div>
+
+                <ul class="conversation">
+                    <li
+                        v-for="objMessage in contacts[activeIndex].messages"
+                        :class="objMessage.status == 'sent' ? 'sent' : 'received'"
+                    >
+                        <span class="text">
+							{{ objMessage.message }}
+						</span>
+						<span class="date">
+                            {{ objMessage.date }}
+                        </span>
+                    </li>
+                </ul>
+
                 <div class="bottom-bar flex-ai-c">
                     <i class="fa-regular fa-face-smile"></i>
                     <div class="text-box flex-ai-c">
