@@ -175,8 +175,18 @@ const app = Vue.createApp({
 	methods: {
         setActiveIndex(element) {
 			this.activeIndex = this.contacts.indexOf(element);
-
 		},
+        sendMsg(text, index) {
+            if (text !== "") {
+                let newMsg = {
+                    date: "Adesso",
+                    message: text,
+                    status: 'sent'
+                }
+                this.contacts[index].messages.push(newMsg);
+                this.textMsg = '';
+	        }
+        }
 	},
 });
 

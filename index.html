@@ -102,7 +102,12 @@
                 <div class="bottom-bar flex-ai-c">
                     <i class="fa-regular fa-face-smile"></i>
                     <div class="text-box flex-ai-c">
-                        <span>Scrivi un messaggio</span>
+                        <input
+                            type="text"
+                            placeholder="Scrivi un messaggio"
+                            v-model="textMsg"
+                            @keyup.enter="sendMsg(textMsg, activeIndex)"
+                        >
                     </div>
                     <i class="fa-solid fa-microphone"></i>
                 </div>              
