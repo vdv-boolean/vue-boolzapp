@@ -52,7 +52,8 @@
                     <li
                         v-for="(contact, i) in contacts"
                         :class="{active: i == activeIndex}"
-                        @click="setActiveIndex(contact)" class="chat"
+                        @click="setActiveIndex(contact)"
+                        class="chat flex-sb"
                     >
                         <img :src="contact.avatar" :alt="contact.name">
 							<div class="info">
@@ -83,19 +84,20 @@
                     </div>   
                 </div>
 
-                <ul class="conversation">
-                    <li
+                <div class="conversation">
+                    <div
                         v-for="objMessage in contacts[activeIndex].messages"
                         :class="objMessage.status == 'sent' ? 'sent' : 'received'"
+                       
                     >
-                        <span class="text">
+                        <div class="text">
 							{{ objMessage.message }}
-						</span>
-						<span class="date">
+						</div>
+						<div class="date">
                             {{ objMessage.date }}
-                        </span>
-                    </li>
-                </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="bottom-bar flex-ai-c">
                     <i class="fa-regular fa-face-smile"></i>

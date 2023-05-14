@@ -25,6 +25,7 @@ General settings
     --search-bord: #F9F9F9;
     --msg-area :#F1EBE7;
     --text-area-icon: #62696A;
+    --sent-msg: #DCF7C0;
 }
 
 /* Flex classes */
@@ -37,6 +38,12 @@ General settings
 .flex-ai-c {
     display: flex;
     align-items: center;
+}
+
+/* List style */
+
+li {
+    list-style: none;
 }
 
 /************************************************
@@ -128,8 +135,15 @@ span {
     height: calc(100% - 70px - 50px - 70px);
     overflow-y: scroll;
 }
-.chat img {
-    height: 20px;
+
+.chat {
+    height: 70px;
+    align-items: center;
+    border-bottom: 1px solid var(--lit-color);
+}
+
+.active {
+    background-color: var(--sel-chat);
 }
 
 /* Chat conversation side */
@@ -138,6 +152,24 @@ span {
     height: 100%;
     width: calc(100% / 3 * 2);
     background-image: url(../img/mine.jpg);
+}
+
+.conversation { 
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 2rem 3rem;
+	overflow-y: scroll;
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: var(--sent-msg);
+}
+
+.received {
+    align-self: flex-start;
+    background-color: #fff;
 }
 
 .bottom-bar {
