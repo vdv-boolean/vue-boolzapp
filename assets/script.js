@@ -3,6 +3,7 @@ const app = Vue.createApp({
 		return {
             activeIndex: 0,
 			search: '',
+			textMsg: '',
 			contacts: [
 				{
 					name: 'Michele',
