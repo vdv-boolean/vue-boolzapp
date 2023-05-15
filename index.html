@@ -42,7 +42,7 @@
                     <i class="fa-solid fa-bell-slash"></i>
                     <div>
                         <div>Ricevi notifiche per i nuovi messaggi</div>
-                        <div>Attiva notifiche desktop</div>
+                        <div class="grey-text underline">Attiva notifiche desktop</div>
                     </div>
                 </div>
                 <div class="chat-search flex-ai-c">
@@ -57,13 +57,13 @@
                         class="chat flex-sb"
                     >
                         <img :src="contact.avatar" :alt="contact.name">
-							<div class="info">
+							<div class="info flex-g">
 								<div class="name">{{ contact.name }}</div>
 								<div class="last-message grey-text">
-									Ultimo messaggio inviato
+									{{ contact.messages[contact.messages.length - 1].message }}
 								</div>
 							</div>
-							<div class="last-date grey-text">{{ contact.messages[contact.messages.length - 1].date.substring(11, 16) }}</div>
+							<div class="last-date grey-text flex-as-e">{{ contact.messages[contact.messages.length - 1].date.substring(0, 10) }}</div>
                     </li>
                 </ul>
             </div>

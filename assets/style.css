@@ -40,6 +40,14 @@ General settings
     align-items: center;
 }
 
+.flex-g {
+    flex-grow: 1;
+}
+
+.flex-as-e {
+    align-self: flex-end;
+}
+
 /* List style */
 
 li {
@@ -50,6 +58,10 @@ li {
 
 .grey-text {
     color: var(--drk-color);
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /************************************************
