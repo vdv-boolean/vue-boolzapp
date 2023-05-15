@@ -178,6 +178,21 @@ span {
     background-color: #fff;
 }
 
+.date {
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+.sent .date::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: ' \f00c\f00c';
+}
+
+.date i {
+    margin-inline: 0;
+}
+
 .bottom-bar {
     background-color: var(--msg-area);
 }

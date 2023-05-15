@@ -179,7 +179,7 @@ const app = Vue.createApp({
         sendMsg(text, index) {
             if (text !== "") {
                 let newMsg = {
-                    date: "Adesso",
+                    date: this.getCurrentTime(),
                     message: text,
                     status: 'sent'
                 }
@@ -188,14 +188,18 @@ const app = Vue.createApp({
 
                 setTimeout(() => {
                     let responceMsg = {
-                        date: "Adesso",
+                        date: this.getCurrentTime(),
                         message: "Ok",
                         status: 'received'
                     };
                     this.contacts[index].messages.push(responceMsg);
                 }, 1000);
 	        }
-        }
+        },
+		getCurrentTime() {
+			let time = '10/01/2020 15:30:55';
+			return time
+		}
 	},
 });
 

@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Boolzapp</title>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js" defer></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
         <script src="assets/script.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="assets/debug.css">
         <link rel="stylesheet" href="assets/style.css">
     </head>
@@ -62,7 +63,7 @@
 									Ultimo messaggio inviato
 								</div>
 							</div>
-							<div class="last-date grey-text">{{ contact.messages[contact.messages.length - 1].date }}</div>
+							<div class="last-date grey-text">{{ contact.messages[contact.messages.length - 1].date.substring(11, 16) }}</div>
                     </li>
                 </ul>
             </div>
@@ -74,7 +75,10 @@
                         <img :src="contacts[activeIndex].avatar" alt="">
                         <div class="div">
                             <div class="user-name">{{ contacts[activeIndex].name }}</div>
-                            <div class="last-access grey-text">Ultimo accesso oggi alle 12:00</div>
+                            <div class="last-access grey-text">
+                                Ultimo accesso alle
+                                {{ contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date.substring(11,16) }}
+                            </div>
                         </div>
                     </div>
                     <div class="control flex-ai-c">
@@ -93,8 +97,8 @@
                         <div class="text">
 							{{ objMessage.message }}
 						</div>
-						<div class="date">
-                            {{ objMessage.date }}
+						<div class="date grey-text">
+                            {{ objMessage.date.substring(11, 16) }}
                         </div>
                     </div>
                 </div>
