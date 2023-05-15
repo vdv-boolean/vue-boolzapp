@@ -29,7 +29,7 @@
                 <div class="user-info flex-sb">
                     <div class="info flex-ai-c">
                         <img src="img/avatar_io.jpg" alt="">
-                        <div class="user-name">Sofia</div>
+                        <div class="user-name blk-text">Sofia</div>
                     </div>
                     <div class="control flex-ai-c">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -58,11 +58,11 @@
                         <img :src="contact.avatar" :alt="contact.name">
 							<div class="info">
 								<div class="name">{{ contact.name }}</div>
-								<div class="last-message">
+								<div class="last-message grey-text">
 									Ultimo messaggio inviato
 								</div>
 							</div>
-							<div class="last-date">5/10/2022</div>
+							<div class="last-date grey-text">{{ contact.messages[contact.messages.length - 1].date }}</div>
                     </li>
                 </ul>
             </div>
@@ -74,7 +74,7 @@
                         <img :src="contacts[activeIndex].avatar" alt="">
                         <div class="div">
                             <div class="user-name">{{ contacts[activeIndex].name }}</div>
-                            <div class="last-access">Ultimo accesso oggi alle 12:00</div>
+                            <div class="last-access grey-text">Ultimo accesso oggi alle 12:00</div>
                         </div>
                     </div>
                     <div class="control flex-ai-c">
