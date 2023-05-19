@@ -219,8 +219,12 @@ span {
     height: 80%;
     flex-grow: 1;
 }
-
 input {
+    width: 100%;
+    border: none
+}
+
+.text-box input {
     height: 100%;
     width: 100%;
     border: none

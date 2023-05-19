@@ -198,11 +198,18 @@ const app = Vue.createApp({
                 }, 1000);
 	        }
         },
-		getCurrentTime() {
-			let time = '10/01/2020 15:30:55';
-			return time
+		getCurrentTime() {		
+			return luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss');
 		}
 	},
+	computed: {
+		filteredContact() {
+			return this.contacts.filter((contacts) => {
+				return contacts.name.toLowerCase().includes(this.search.toLowerCase());
+			})
+		},
+	},
+
 });
 
 app.mount('#app');

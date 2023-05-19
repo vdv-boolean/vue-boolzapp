@@ -47,11 +47,11 @@
                 </div>
                 <div class="chat-search flex-ai-c">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <span>Cerca o inizia una nuova chat</span>
+                    <input type="text" placeholder="Ricevi notifiche per i nuovi messaggi" v-model="search">
                 </div>
                 <ul class="chats">
                     <li
-                        v-for="(contact, i) in contacts"
+                        v-for="(contact, i) in filteredContact"
                         :class="{active: i == activeIndex}"
                         @click="setActiveIndex(contact)"
                         class="chat flex-sb"
